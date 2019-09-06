@@ -1,31 +1,88 @@
-//Header just to show I know how to change html elements with jquery incase I don't do it much this assignment.
+//Header 
 $("#header").html("CRYSTAL COLLECTOR");
 
 //global variables
-var diamond;
-var ruby;
-var sapphire;
-var emerald;
-var computerNumber;
-var currentNumber;
-var wins;
-var loses;
+var gameStarted = false;
+var diamond = Math.floor(Math.random() * 12) + 1;
+var ruby = Math.floor(Math.random() * 12) + 1;
+var sapphire = Math.floor(Math.random() * 12) + 1;
+var emerald = Math.floor(Math.random() * 12) + 1;
+var computerNumber = Math.floor(Math.random() * 102) + 19;
+var currentNumber = 0;
+var wins = 0;
+var loses = 0;
 
-$("#diamond").click(function() {
+//Put starting numbers on screen
+$("#numberToGet").html(computerNumber);
+$("#currentNumber").html(currentNumber);
 
+//Reset function
+function reset() {
+     //resets variables
+     diamond = Math.floor(Math.random() * 12) + 1;
+     ruby = Math.floor(Math.random() * 12) + 1;
+     sapphire = Math.floor(Math.random() * 12) + 1;
+     emerald = Math.floor(Math.random() * 12) + 1;
+     computerNumber = Math.floor(Math.random() * 102) + 19;
+     currentNumber = 0;
+     //resets text
+     $("#numberToGet").html(computerNumber);
+     $("#currentNumber").html(currentNumber);
+}
+
+//On click event for Diamond
+$("#diamond").click(function () {
+     currentNumber = currentNumber + diamond;
+     $("#currentNumber").html(currentNumber);
+     if (currentNumber === computerNumber) {
+          wins++;
+          reset();
+     } else if (currentNumber > computerNumber) {
+          loses++;
+          reset();
+     };
 });
 
+//On click event for Ruby
 $("#ruby").click(function () {
-
+     currentNumber = currentNumber + ruby;
+     $("#currentNumber").html(currentNumber);
+     if (currentNumber === computerNumber) {
+          wins++;
+          reset();
+     } else if (currentNumber > computerNumber) {
+          loses++;
+          reset();
+     };
 });
 
+//On click event for Sapphire
 $("#sapphire").click(function () {
-
+     currentNumber = currentNumber + sapphire;
+     $("#currentNumber").html(currentNumber);
+     if (currentNumber === computerNumber) {
+          wins++;
+          reset();
+     } else if (currentNumber > computerNumber) {
+          loses++;
+          reset();
+     };
 });
 
+//On click event for Emerald
 $("#emerald").click(function () {
-
+     currentNumber = currentNumber + emerald;
+     $("#currentNumber").html(currentNumber);
+     if (currentNumber === computerNumber) {
+          wins++;
+          reset();
+     } else if (currentNumber > computerNumber) {
+          loses++;
+          reset();
+     };
 });
+
+
 
 
 
