@@ -1,0 +1,12 @@
+h1 {
+    font-family: 'Paytone One', sans-serif;
+}
+
+p {
+    font-family: 'Courgette', cursive;
+}
+
+.card {
+    display: inline-block;
+    margin: 1%;
+}

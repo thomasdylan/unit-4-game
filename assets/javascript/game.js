@@ -1,10 +1,31 @@
+//Header just to show I know how to change html elements with jquery incase I don't do it much this assignment.
 $("#header").html("CRYSTAL COLLECTOR");
 
+//global variables
+var diamond;
+var ruby;
+var sapphire;
+var emerald;
+var computerNumber;
+var currentNumber;
+var wins;
+var loses;
 
+$("#diamond").click(function() {
 
+});
 
+$("#ruby").click(function () {
 
+});
 
+$("#sapphire").click(function () {
+
+});
+
+$("#emerald").click(function () {
+
+});
 
 
 
