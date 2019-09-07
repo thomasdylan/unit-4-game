@@ -35,10 +35,7 @@ function reset() {
      $("#losses").html("Losses: " + losses);
 }
 
-//On click event for Diamond
-$("#diamond").click(function () {
-     currentNumber = currentNumber + diamond;
-     $("#currentNumber").html(currentNumber);
+function check() {
      if (currentNumber === computerNumber) {
           wins++;
           reset();
@@ -46,45 +43,34 @@ $("#diamond").click(function () {
           losses++;
           reset();
      };
+}
+
+//On click event for Diamond
+$("#diamond").click(function () {
+     currentNumber = currentNumber + diamond;
+     $("#currentNumber").html(currentNumber);
+     check();
 });
 
 //On click event for Ruby
 $("#ruby").click(function () {
      currentNumber = currentNumber + ruby;
      $("#currentNumber").html(currentNumber);
-     if (currentNumber === computerNumber) {
-          wins++;
-          reset();
-     } else if (currentNumber > computerNumber) {
-          losses++;
-          reset();
-     };
+     check();
 });
 
 //On click event for Sapphire
 $("#sapphire").click(function () {
      currentNumber = currentNumber + sapphire;
      $("#currentNumber").html(currentNumber);
-     if (currentNumber === computerNumber) {
-          wins++;
-          reset();
-     } else if (currentNumber > computerNumber) {
-          losses++;
-          reset();
-     };
+     check();
 });
 
 //On click event for Emerald
 $("#emerald").click(function () {
      currentNumber = currentNumber + emerald;
      $("#currentNumber").html(currentNumber);
-     if (currentNumber === computerNumber) {
-          wins++;
-          reset();
-     } else if (currentNumber > computerNumber) {
-          losses++;
-          reset();
-     };
+     check();
 });
 
 
